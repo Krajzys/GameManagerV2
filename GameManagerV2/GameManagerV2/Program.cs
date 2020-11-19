@@ -19,5 +19,10 @@ namespace GameManagerV2
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
+        public static void test()
+        {
+
+        }
     }
 }
