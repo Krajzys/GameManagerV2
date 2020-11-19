@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6bVUDEmQucDSNlZ1ZVz04QxyqFZyWxjMLircCIVvZSVcw10OkgaaWBPlE/J1pe1g22mAp23ymwotXVtLSHoLyg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\krajz\\source\\repos\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\krajz\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
