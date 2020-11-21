@@ -15,42 +15,50 @@ namespace GameManagerV2
 {
     public partial class Form1 : Form
     {
+        DatabaseHandler dbHandler;
         public Form1()
         {
             InitializeComponent();
-            InitializeDB();
-            // TODO: Add textbox to fill in game name
-            // TODO: Add a button that will insert gamename into the database
-            // TODO: Add an option to confirm game name with ENTER
-            // TODO: Write functions to insert, delete, edit things in the database
+            dbHandler = new DatabaseHandler();
+            dbHandler.InitializeDB();
+            dbHandler.GetAllGames().ForEach((GameRecord game) => { MessageBox.Show(game.name); });
+            this.listView1.Columns.Add("Name");
+            this.listView1.Columns.Add("Date");
+            this.listView1.Columns.Add("Progress");
+            this.listView1.Columns.Add("Score");
+
+            // TODO: Why the sound when you press enter ?
+            // TODO: Write functions to delete, edit things in the database
             // TODO: Add list view of games that are in the database
             // TODO: Add possibility of editing game name, date and progress from the list view
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.listView1.Update();
         }
 
-        private void InitializeDB()
+        private void addGameButton_Click(object sender, EventArgs e)
         {
-            string filename = @".\games.db";
-            if (!File.Exists(filename))
+            string gameName = this.textBox1.Text;
+            this.textBox1.Text = "";
+            dbHandler.Insert(gameName);
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("Creating database");
-                string connectionString;
-                connectionString = @"URI=file:.\games.db";
+                addGameButton_Click(sender, e);
 
-                SQLiteConnection cnn;
-                cnn = new SQLiteConnection(connectionString);
-                cnn.Open();
-
-                using var cmd = new SQLiteCommand(cnn);
-                cmd.CommandText = "CREATE TABLE games(id INTEGER PRIMARY KEY, name TEXT, date TEXT, progress TEXT, score INTEGER)";
-                cmd.ExecuteNonQuery();
-
-                cnn.Close();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Data.SQLite;
 
 namespace GameManagerV2
 {
@@ -18,11 +20,6 @@ namespace GameManagerV2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-        }
-
-        public static void test()
-        {
-
         }
     }
 }
