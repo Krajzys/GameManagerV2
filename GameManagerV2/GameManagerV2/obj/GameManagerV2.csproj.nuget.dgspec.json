@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\krajz\\source\\repos\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj": {}
+    "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\krajz\\source\\repos\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj": {
+    "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krajz\\source\\repos\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
+        "projectUniqueName": "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
         "projectName": "GameManagerV2",
-        "projectPath": "C:\\Users\\krajz\\source\\repos\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
+        "projectPath": "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
         "packagesPath": "C:\\Users\\krajz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krajz\\source\\repos\\GameManagerV2\\GameManagerV2\\GameManagerV2\\obj\\",
+        "outputPath": "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\krajz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,14 +38,15 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "System.Data.SQLite.Core": {
               "target": "Package",
-              "version": "[1.0.113.6, )"
+              "version": "[1.0.115.5, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.2, )"
+              "version": "[4.8.3, )"
             }
           },
           "imports": [
@@ -60,12 +59,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -74,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

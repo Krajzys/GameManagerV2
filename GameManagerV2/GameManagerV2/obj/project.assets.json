@@ -69,7 +69,7 @@
           }
         }
       },
-      "Stub.System.Data.SQLite.Core.NetStandard/1.0.113.1": {
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/System.Data.SQLite.dll": {}
@@ -96,7 +96,7 @@
           }
         }
       },
-      "System.Data.SqlClient/4.8.2": {
+      "System.Data.SqlClient/4.8.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
@@ -120,10 +120,10 @@
           }
         }
       },
-      "System.Data.SQLite.Core/1.0.113.6": {
+      "System.Data.SQLite.Core/1.0.115.5": {
         "type": "package",
         "dependencies": {
-          "Stub.System.Data.SQLite.Core.NetStandard": "1.0.113.1"
+          "Stub.System.Data.SQLite.Core.NetStandard": "[1.0.115.5]"
         }
       },
       "System.Security.AccessControl/4.7.0": {
@@ -252,6 +252,7 @@
       "path": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -267,6 +268,7 @@
       "path": "runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -282,6 +284,7 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -291,10 +294,10 @@
         "version.txt"
       ]
     },
-    "Stub.System.Data.SQLite.Core.NetStandard/1.0.113.1": {
-      "sha512": "qFjwuCuZlTz3yT06gaueDJwTykiblNeaLTx3sONXoNlLm2NJwghLvr+W9fvRevKcYcIRiKrq6WJ56QwZJq9fnQ==",
+    "Stub.System.Data.SQLite.Core.NetStandard/1.0.115.5": {
+      "sha512": "WfrqQg6WL+r4H1sVKTenNj6ERLXUukUxqcjH1rqPqXadeIWccTVpydESieD7cZ/NWQVSKLYIHuoBX5du+BFhIQ==",
       "type": "package",
-      "path": "stub.system.data.sqlite.core.netstandard/1.0.113.1",
+      "path": "stub.system.data.sqlite.core.netstandard/1.0.115.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -308,14 +311,14 @@
         "runtimes/osx-x64/native/SQLite.Interop.dll",
         "runtimes/win-x64/native/SQLite.Interop.dll",
         "runtimes/win-x86/native/SQLite.Interop.dll",
-        "stub.system.data.sqlite.core.netstandard.1.0.113.1.nupkg.sha512",
+        "stub.system.data.sqlite.core.netstandard.1.0.115.5.nupkg.sha512",
         "stub.system.data.sqlite.core.netstandard.nuspec"
       ]
     },
-    "System.Data.SqlClient/4.8.2": {
-      "sha512": "80vGtW6uLB4AkyrdVuKTXYUyuXDPAsSKbTVfvjndZaRAYxzFzWhJbvUfeAKrN+128ycWZjLIAl61dFUwWHOOTw==",
+    "System.Data.SqlClient/4.8.3": {
+      "sha512": "yERfVLXAY0QbylAgaGLByYN0hFxX28aeEQ0hUgJO+Ntn1AfmWl5HHUoYJA0Yl9HhIUUJHVaS/Sw/RLZr5aaC+A==",
       "type": "package",
-      "path": "system.data.sqlclient/4.8.2",
+      "path": "system.data.sqlclient/4.8.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -392,20 +395,20 @@
         "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
-        "system.data.sqlclient.4.8.2.nupkg.sha512",
+        "system.data.sqlclient.4.8.3.nupkg.sha512",
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "System.Data.SQLite.Core/1.0.113.6": {
-      "sha512": "8Iyo9b2iG29eYCGjnly6EdF+yw20q83vRTkK9zpJzip5QvQeRSs7rQPmaxg+R2oJKNL8w/6K274F6YHXkEjq5w==",
+    "System.Data.SQLite.Core/1.0.115.5": {
+      "sha512": "vADIqqgpxaC5xR6qOV8/KMZkQeSDCfmmWpVOtQx0oEr3Yjq2XdTxX7+jfE4+oO2xPovAbYiz6Q5cLRbSsDkq6Q==",
       "type": "package",
-      "path": "system.data.sqlite.core/1.0.113.6",
+      "path": "system.data.sqlite.core/1.0.115.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "system.data.sqlite.core.1.0.113.6.nupkg.sha512",
+        "system.data.sqlite.core.1.0.115.5.nupkg.sha512",
         "system.data.sqlite.core.nuspec"
       ]
     },
@@ -512,26 +515,22 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "System.Data.SQLite.Core >= 1.0.113.6",
-      "System.Data.SqlClient >= 4.8.2"
+      "System.Data.SQLite.Core >= 1.0.115.5",
+      "System.Data.SqlClient >= 4.8.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\krajz\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\krajz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\krajz\\source\\repos\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
+      "projectUniqueName": "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
       "projectName": "GameManagerV2",
-      "projectPath": "C:\\Users\\krajz\\source\\repos\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
+      "projectPath": "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
       "packagesPath": "C:\\Users\\krajz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\krajz\\source\\repos\\GameManagerV2\\GameManagerV2\\GameManagerV2\\obj\\",
+      "outputPath": "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\krajz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -545,6 +544,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -556,14 +556,15 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "System.Data.SQLite.Core": {
             "target": "Package",
-            "version": "[1.0.113.6, )"
+            "version": "[1.0.115.5, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",
-            "version": "[4.8.2, )"
+            "version": "[4.8.3, )"
           }
         },
         "imports": [
@@ -576,12 +577,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.2, 3.1.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -590,7 +585,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

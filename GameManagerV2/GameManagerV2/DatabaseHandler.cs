@@ -34,7 +34,7 @@ namespace GameManagerV2
             }
         }
 
-        public int Insert(string gameName)
+        public int Insert(string gameName, out int id)
         {
             SQLiteConnection cnn;
             cnn = new SQLiteConnection(connectionString);
@@ -46,7 +46,7 @@ namespace GameManagerV2
             };
 
             var idobj = cmd.ExecuteScalar();
-            int id = 0;
+            id = 0;
             if (!DBNull.Value.Equals(idobj))
             {
                 id = Convert.ToInt32(idobj) + 1;
