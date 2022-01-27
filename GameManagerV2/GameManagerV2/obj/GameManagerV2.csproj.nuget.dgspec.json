@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj": {}
+    "C:\\Users\\krajz\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj": {
+    "C:\\Users\\krajz\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
+        "projectUniqueName": "C:\\Users\\krajz\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
         "projectName": "GameManagerV2",
-        "projectPath": "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
+        "projectPath": "C:\\Users\\krajz\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
         "packagesPath": "C:\\Users\\krajz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\obj\\",
+        "outputPath": "C:\\Users\\krajz\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krajz\\AppData\\Roaming\\NuGet\\NuGet.Config",

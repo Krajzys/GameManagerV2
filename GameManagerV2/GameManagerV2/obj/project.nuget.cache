@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w8fIxDV8aq8jgrTcSqCpwjJSHaGr3xx75E+LsNrx+tQjCbaJmD1qCOk0geL/4js9By1dyJnGZbuBYb7BoN8iRQ==",
+  "dgSpecHash": "1+gjdtD1imTKD6XEeT/QXIUEWnuIVL958L4QVi9UNwIous87ZKcHKJ3hyhrgGEoc96ULNUw93HD2hVtmgryUbQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\krajz\\Documents\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
+  "projectFilePath": "C:\\Users\\krajz\\Projects\\C#\\GameManagerV2\\GameManagerV2\\GameManagerV2\\GameManagerV2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krajz\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\krajz\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -1,6 +1,6 @@
 ﻿namespace GameManagerV2
 {
-    partial class Form1
+    partial class GameManagerUI
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.selectedItemContainer = new System.Windows.Forms.GroupBox();
+            this.progressBox = new System.Windows.Forms.ComboBox();
+            this.scoreBox = new System.Windows.Forms.NumericUpDown();
+            this.dateBox = new System.Windows.Forms.DateTimePicker();
             this.editGameButton = new System.Windows.Forms.Button();
             this.nameBox = new System.Windows.Forms.TextBox();
-            this.scoreBox = new System.Windows.Forms.TextBox();
             this.scoreLabel = new System.Windows.Forms.Label();
-            this.progressBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.progressLabel = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
-            this.dateBox = new System.Windows.Forms.TextBox();
             this.gameListView = new System.Windows.Forms.ListView();
             this.id = new System.Windows.Forms.ColumnHeader();
             this.name = new System.Windows.Forms.ColumnHeader();
@@ -49,30 +49,33 @@
             this.gameNameBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.selectedItemContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.selectedItemContainer);
             this.panel1.Controls.Add(this.gameListView);
             this.panel1.Controls.Add(this.addGameButton);
             this.panel1.Controls.Add(this.gameNameBox);
             this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.MaximumSize = new System.Drawing.Size(772, 465);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(672, 365);
             this.panel1.TabIndex = 1;
             // 
             // selectedItemContainer
             // 
+            this.selectedItemContainer.Controls.Add(this.progressBox);
+            this.selectedItemContainer.Controls.Add(this.scoreBox);
+            this.selectedItemContainer.Controls.Add(this.dateBox);
             this.selectedItemContainer.Controls.Add(this.editGameButton);
             this.selectedItemContainer.Controls.Add(this.nameBox);
-            this.selectedItemContainer.Controls.Add(this.scoreBox);
             this.selectedItemContainer.Controls.Add(this.scoreLabel);
-            this.selectedItemContainer.Controls.Add(this.progressBox);
             this.selectedItemContainer.Controls.Add(this.nameLabel);
             this.selectedItemContainer.Controls.Add(this.progressLabel);
             this.selectedItemContainer.Controls.Add(this.dateLabel);
-            this.selectedItemContainer.Controls.Add(this.dateBox);
             this.selectedItemContainer.Location = new System.Drawing.Point(57, 263);
             this.selectedItemContainer.Name = "selectedItemContainer";
             this.selectedItemContainer.Size = new System.Drawing.Size(545, 77);
@@ -80,12 +83,47 @@
             this.selectedItemContainer.TabStop = false;
             this.selectedItemContainer.Text = "Edit selected game";
             // 
+            // progressBox
+            // 
+            this.progressBox.FormattingEnabled = true;
+            this.progressBox.Items.AddRange(new object[] {
+            "Completed",
+            "In progress",
+            "To be started",
+            "On hold"});
+            this.progressBox.Location = new System.Drawing.Point(331, 16);
+            this.progressBox.Name = "progressBox";
+            this.progressBox.Size = new System.Drawing.Size(127, 23);
+            this.progressBox.TabIndex = 6;
+            this.progressBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.progressBox_KeyDown);
+            // 
+            // scoreBox
+            // 
+            this.scoreBox.Location = new System.Drawing.Point(331, 45);
+            this.scoreBox.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.scoreBox.Name = "scoreBox";
+            this.scoreBox.Size = new System.Drawing.Size(127, 23);
+            this.scoreBox.TabIndex = 7;
+            this.scoreBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.scoreBox_KeyDown);
+            // 
+            // dateBox
+            // 
+            this.dateBox.Location = new System.Drawing.Point(52, 45);
+            this.dateBox.Name = "dateBox";
+            this.dateBox.Size = new System.Drawing.Size(200, 23);
+            this.dateBox.TabIndex = 5;
+            this.dateBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dateBox_KeyDown);
+            // 
             // editGameButton
             // 
             this.editGameButton.Location = new System.Drawing.Point(470, 16);
             this.editGameButton.Name = "editGameButton";
             this.editGameButton.Size = new System.Drawing.Size(69, 52);
-            this.editGameButton.TabIndex = 13;
+            this.editGameButton.TabIndex = 8;
             this.editGameButton.Text = "Save";
             this.editGameButton.UseVisualStyleBackColor = true;
             this.editGameButton.Click += new System.EventHandler(this.editGameButton_Click);
@@ -98,14 +136,6 @@
             this.nameBox.TabIndex = 4;
             this.nameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nameBox_KeyDown);
             // 
-            // scoreBox
-            // 
-            this.scoreBox.Location = new System.Drawing.Point(331, 45);
-            this.scoreBox.Name = "scoreBox";
-            this.scoreBox.Size = new System.Drawing.Size(127, 23);
-            this.scoreBox.TabIndex = 7;
-            this.scoreBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.scoreBox_KeyDown);
-            // 
             // scoreLabel
             // 
             this.scoreLabel.AutoSize = true;
@@ -114,14 +144,6 @@
             this.scoreLabel.Size = new System.Drawing.Size(36, 15);
             this.scoreLabel.TabIndex = 11;
             this.scoreLabel.Text = "Score";
-            // 
-            // progressBox
-            // 
-            this.progressBox.Location = new System.Drawing.Point(331, 16);
-            this.progressBox.Name = "progressBox";
-            this.progressBox.Size = new System.Drawing.Size(127, 23);
-            this.progressBox.TabIndex = 6;
-            this.progressBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.progressBox_KeyDown);
             // 
             // nameLabel
             // 
@@ -150,14 +172,6 @@
             this.dateLabel.TabIndex = 9;
             this.dateLabel.Text = "Date";
             // 
-            // dateBox
-            // 
-            this.dateBox.Location = new System.Drawing.Point(52, 45);
-            this.dateBox.Name = "dateBox";
-            this.dateBox.Size = new System.Drawing.Size(200, 23);
-            this.dateBox.TabIndex = 5;
-            this.dateBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dateBox_KeyDown);
-            // 
             // gameListView
             // 
             this.gameListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -168,9 +182,10 @@
             this.score});
             this.gameListView.FullRowSelect = true;
             this.gameListView.GridLines = true;
+            this.gameListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.gameListView.HideSelection = false;
-            this.gameListView.LabelEdit = true;
             this.gameListView.Location = new System.Drawing.Point(57, 90);
+            this.gameListView.MaximumSize = new System.Drawing.Size(600, 300);
             this.gameListView.MultiSelect = false;
             this.gameListView.Name = "gameListView";
             this.gameListView.RightToLeftLayout = true;
@@ -179,6 +194,8 @@
             this.gameListView.UseCompatibleStateImageBehavior = false;
             this.gameListView.View = System.Windows.Forms.View.Details;
             this.gameListView.SelectedIndexChanged += new System.EventHandler(this.gameListView_SelectedIndexChanged);
+            this.gameListView.Enter += new System.EventHandler(this.gameListView_Enter);
+            this.gameListView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameListView_KeyDown);
             // 
             // id
             // 
@@ -223,21 +240,24 @@
             this.gameNameBox.TabIndex = 1;
             this.gameNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameNameBox_KeyDown);
             // 
-            // Form1
+            // GameManagerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(704, 388);
+            this.ClientSize = new System.Drawing.Size(696, 388);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "GameManagerUI";
             this.Text = "Game Manager v2";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.GameManagerUI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.selectedItemContainer.ResumeLayout(false);
             this.selectedItemContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -252,15 +272,15 @@
         private System.Windows.Forms.ColumnHeader progress;
         private System.Windows.Forms.ColumnHeader score;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.TextBox scoreBox;
-        private System.Windows.Forms.TextBox progressBox;
-        private System.Windows.Forms.TextBox dateBox;
         private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.Label scoreLabel;
         private System.Windows.Forms.Label progressLabel;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.GroupBox selectedItemContainer;
         private System.Windows.Forms.Button editGameButton;
+        private System.Windows.Forms.DateTimePicker dateBox;
+        private System.Windows.Forms.NumericUpDown scoreBox;
+        private System.Windows.Forms.ComboBox progressBox;
     }
 }
 
