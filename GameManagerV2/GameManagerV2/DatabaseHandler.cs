@@ -49,6 +49,13 @@ namespace GameManagerV2
             }
         }
 
+        public void DropDB()
+        {
+            using var cmd = new SQLiteCommand(connection);
+            cmd.CommandText = "DROP TABLE games;";
+            cmd.ExecuteNonQuery();
+        }
+
         public int ModifyByID(int id, GameRecord gameRecord)
         {
             using var cmd = new SQLiteCommand(connection)

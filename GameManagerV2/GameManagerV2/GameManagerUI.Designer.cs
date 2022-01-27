@@ -47,9 +47,13 @@
             this.score = new System.Windows.Forms.ColumnHeader();
             this.addGameButton = new System.Windows.Forms.Button();
             this.gameNameBox = new System.Windows.Forms.TextBox();
+            this.gameManagerMenu = new System.Windows.Forms.MenuStrip();
+            this.showShortcutsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.selectedItemContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scoreBox)).BeginInit();
+            this.gameManagerMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,6 +63,7 @@
             this.panel1.Controls.Add(this.gameListView);
             this.panel1.Controls.Add(this.addGameButton);
             this.panel1.Controls.Add(this.gameNameBox);
+            this.panel1.Controls.Add(this.gameManagerMenu);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.MaximumSize = new System.Drawing.Size(772, 465);
             this.panel1.Name = "panel1";
@@ -240,6 +245,31 @@
             this.gameNameBox.TabIndex = 1;
             this.gameNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameNameBox_KeyDown);
             // 
+            // gameManagerMenu
+            // 
+            this.gameManagerMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showShortcutsToolStripMenuItem,
+            this.clearDatabaseToolStripMenuItem});
+            this.gameManagerMenu.Location = new System.Drawing.Point(0, 0);
+            this.gameManagerMenu.Name = "gameManagerMenu";
+            this.gameManagerMenu.Size = new System.Drawing.Size(672, 24);
+            this.gameManagerMenu.TabIndex = 13;
+            this.gameManagerMenu.Text = "gameManagerMenu";
+            // 
+            // showShortcutsToolStripMenuItem
+            // 
+            this.showShortcutsToolStripMenuItem.Name = "showShortcutsToolStripMenuItem";
+            this.showShortcutsToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.showShortcutsToolStripMenuItem.Text = "Show shortcuts";
+            this.showShortcutsToolStripMenuItem.Click += new System.EventHandler(this.showShortcutsToolStripMenuItem_Click);
+            // 
+            // clearDatabaseToolStripMenuItem
+            // 
+            this.clearDatabaseToolStripMenuItem.Name = "clearDatabaseToolStripMenuItem";
+            this.clearDatabaseToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.clearDatabaseToolStripMenuItem.Text = "Clear database";
+            this.clearDatabaseToolStripMenuItem.Click += new System.EventHandler(this.clearDatabaseToolStripMenuItem_Click);
+            // 
             // GameManagerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -248,6 +278,7 @@
             this.ClientSize = new System.Drawing.Size(696, 388);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MainMenuStrip = this.gameManagerMenu;
             this.Name = "GameManagerUI";
             this.Text = "Game Manager v2";
             this.Load += new System.EventHandler(this.GameManagerUI_Load);
@@ -256,6 +287,8 @@
             this.selectedItemContainer.ResumeLayout(false);
             this.selectedItemContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scoreBox)).EndInit();
+            this.gameManagerMenu.ResumeLayout(false);
+            this.gameManagerMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,6 +314,11 @@
         private System.Windows.Forms.DateTimePicker dateBox;
         private System.Windows.Forms.NumericUpDown scoreBox;
         private System.Windows.Forms.ComboBox progressBox;
+        private System.Windows.Forms.MenuStrip gameManagerMenu;
+        private System.Windows.Forms.ToolStripMenuItem showShortcutsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 

@@ -163,13 +163,18 @@ namespace GameManagerV2
                     {
                         dbHandler.DeleteByID(id);
                         UpdateGameListView(-1);
-                        nameBox.Text = String.Empty;
-                        dateBox.Value = DateTime.Now;
-                        scoreBox.Value = 0;
-                        progressBox.Text = String.Empty;
+                        resetEditBoxes();
                     }
                 }
             }
+        }
+
+        private void resetEditBoxes()
+        {
+            nameBox.Text = String.Empty;
+            dateBox.Value = DateTime.Now;
+            scoreBox.ResetText();
+            progressBox.Text = String.Empty;
         }
 
         private void gameListView_Enter(object sender, EventArgs e)
@@ -186,6 +191,30 @@ namespace GameManagerV2
             {
                 gameListView.Items[0].Selected = true;
                 gameListView.Items[0].Focused = true;
+            }
+        }
+
+        private void showShortcutsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Add game field:\n" +
+                " Enter - Add game and set focus to progress in edit view\n" +
+                " Shift + Enter - Add game\n" +
+                "Game list shortcuts:\n" +
+                " Delete - Delete selected game\n" +
+                "Any of the fields in edit view:\n" +
+                " Enter - Save selected game",
+                "Shortcuts");
+        }
+
+        private void clearDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete all data from database?", "Delete data", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                dbHandler.DropDB();
+                dbHandler.InitializeDB();
+                UpdateGameListView(-1);
+                resetEditBoxes();
             }
         }
     }
