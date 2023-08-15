@@ -28,270 +28,254 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.selectedItemContainer = new System.Windows.Forms.GroupBox();
-            this.progressBox = new System.Windows.Forms.ComboBox();
-            this.scoreBox = new System.Windows.Forms.NumericUpDown();
-            this.dateBox = new System.Windows.Forms.DateTimePicker();
-            this.editGameButton = new System.Windows.Forms.Button();
-            this.nameBox = new System.Windows.Forms.TextBox();
-            this.scoreLabel = new System.Windows.Forms.Label();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.progressLabel = new System.Windows.Forms.Label();
-            this.dateLabel = new System.Windows.Forms.Label();
-            this.gameListView = new System.Windows.Forms.ListView();
-            this.id = new System.Windows.Forms.ColumnHeader();
-            this.name = new System.Windows.Forms.ColumnHeader();
-            this.date = new System.Windows.Forms.ColumnHeader();
-            this.progress = new System.Windows.Forms.ColumnHeader();
-            this.score = new System.Windows.Forms.ColumnHeader();
-            this.addGameButton = new System.Windows.Forms.Button();
-            this.gameNameBox = new System.Windows.Forms.TextBox();
-            this.gameManagerMenu = new System.Windows.Forms.MenuStrip();
-            this.showShortcutsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1.SuspendLayout();
-            this.selectedItemContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.scoreBox)).BeginInit();
-            this.gameManagerMenu.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new System.Windows.Forms.Panel();
+            selectedItemContainer = new System.Windows.Forms.GroupBox();
+            progressBox = new System.Windows.Forms.ComboBox();
+            scoreBox = new System.Windows.Forms.NumericUpDown();
+            dateBox = new System.Windows.Forms.DateTimePicker();
+            editGameButton = new System.Windows.Forms.Button();
+            nameBox = new System.Windows.Forms.TextBox();
+            scoreLabel = new System.Windows.Forms.Label();
+            nameLabel = new System.Windows.Forms.Label();
+            progressLabel = new System.Windows.Forms.Label();
+            dateLabel = new System.Windows.Forms.Label();
+            gameListView = new System.Windows.Forms.ListView();
+            id = new System.Windows.Forms.ColumnHeader();
+            name = new System.Windows.Forms.ColumnHeader();
+            date = new System.Windows.Forms.ColumnHeader();
+            progress = new System.Windows.Forms.ColumnHeader();
+            score = new System.Windows.Forms.ColumnHeader();
+            addGameButton = new System.Windows.Forms.Button();
+            gameNameBox = new System.Windows.Forms.TextBox();
+            gameManagerMenu = new System.Windows.Forms.MenuStrip();
+            showShortcutsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            clearDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            panel1.SuspendLayout();
+            selectedItemContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)scoreBox).BeginInit();
+            gameManagerMenu.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(this.selectedItemContainer);
-            this.panel1.Controls.Add(this.gameListView);
-            this.panel1.Controls.Add(this.addGameButton);
-            this.panel1.Controls.Add(this.gameNameBox);
-            this.panel1.Controls.Add(this.gameManagerMenu);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.MaximumSize = new System.Drawing.Size(772, 465);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 365);
-            this.panel1.TabIndex = 1;
+            panel1.AutoSize = true;
+            panel1.Controls.Add(selectedItemContainer);
+            panel1.Controls.Add(gameListView);
+            panel1.Controls.Add(addGameButton);
+            panel1.Controls.Add(gameNameBox);
+            panel1.Controls.Add(gameManagerMenu);
+            panel1.Location = new System.Drawing.Point(12, 12);
+            panel1.MaximumSize = new System.Drawing.Size(772, 465);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(672, 365);
+            panel1.TabIndex = 1;
             // 
             // selectedItemContainer
             // 
-            this.selectedItemContainer.Controls.Add(this.progressBox);
-            this.selectedItemContainer.Controls.Add(this.scoreBox);
-            this.selectedItemContainer.Controls.Add(this.dateBox);
-            this.selectedItemContainer.Controls.Add(this.editGameButton);
-            this.selectedItemContainer.Controls.Add(this.nameBox);
-            this.selectedItemContainer.Controls.Add(this.scoreLabel);
-            this.selectedItemContainer.Controls.Add(this.nameLabel);
-            this.selectedItemContainer.Controls.Add(this.progressLabel);
-            this.selectedItemContainer.Controls.Add(this.dateLabel);
-            this.selectedItemContainer.Location = new System.Drawing.Point(57, 263);
-            this.selectedItemContainer.Name = "selectedItemContainer";
-            this.selectedItemContainer.Size = new System.Drawing.Size(545, 77);
-            this.selectedItemContainer.TabIndex = 12;
-            this.selectedItemContainer.TabStop = false;
-            this.selectedItemContainer.Text = "Edit selected game";
+            selectedItemContainer.Controls.Add(progressBox);
+            selectedItemContainer.Controls.Add(scoreBox);
+            selectedItemContainer.Controls.Add(dateBox);
+            selectedItemContainer.Controls.Add(editGameButton);
+            selectedItemContainer.Controls.Add(nameBox);
+            selectedItemContainer.Controls.Add(scoreLabel);
+            selectedItemContainer.Controls.Add(nameLabel);
+            selectedItemContainer.Controls.Add(progressLabel);
+            selectedItemContainer.Controls.Add(dateLabel);
+            selectedItemContainer.Location = new System.Drawing.Point(57, 263);
+            selectedItemContainer.Name = "selectedItemContainer";
+            selectedItemContainer.Size = new System.Drawing.Size(545, 77);
+            selectedItemContainer.TabIndex = 12;
+            selectedItemContainer.TabStop = false;
+            selectedItemContainer.Text = "Edit selected game";
             // 
             // progressBox
             // 
-            this.progressBox.FormattingEnabled = true;
-            this.progressBox.Items.AddRange(new object[] {
-            "Completed",
-            "In progress",
-            "To be started",
-            "On hold"});
-            this.progressBox.Location = new System.Drawing.Point(331, 16);
-            this.progressBox.Name = "progressBox";
-            this.progressBox.Size = new System.Drawing.Size(127, 23);
-            this.progressBox.TabIndex = 6;
-            this.progressBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.progressBox_KeyDown);
+            progressBox.FormattingEnabled = true;
+            progressBox.Items.AddRange(new object[] { "Completed", "In progress", "To be started", "On hold" });
+            progressBox.Location = new System.Drawing.Point(331, 16);
+            progressBox.Name = "progressBox";
+            progressBox.Size = new System.Drawing.Size(127, 23);
+            progressBox.TabIndex = 6;
+            progressBox.KeyDown += progressBox_KeyDown;
             // 
             // scoreBox
             // 
-            this.scoreBox.Location = new System.Drawing.Point(331, 45);
-            this.scoreBox.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.scoreBox.Name = "scoreBox";
-            this.scoreBox.Size = new System.Drawing.Size(127, 23);
-            this.scoreBox.TabIndex = 7;
-            this.scoreBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.scoreBox_KeyDown);
+            scoreBox.Location = new System.Drawing.Point(331, 45);
+            scoreBox.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            scoreBox.Name = "scoreBox";
+            scoreBox.Size = new System.Drawing.Size(127, 23);
+            scoreBox.TabIndex = 7;
+            scoreBox.KeyDown += scoreBox_KeyDown;
             // 
             // dateBox
             // 
-            this.dateBox.Location = new System.Drawing.Point(52, 45);
-            this.dateBox.Name = "dateBox";
-            this.dateBox.Size = new System.Drawing.Size(200, 23);
-            this.dateBox.TabIndex = 5;
-            this.dateBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dateBox_KeyDown);
+            dateBox.Location = new System.Drawing.Point(52, 45);
+            dateBox.Name = "dateBox";
+            dateBox.Size = new System.Drawing.Size(200, 23);
+            dateBox.TabIndex = 5;
+            dateBox.KeyDown += dateBox_KeyDown;
             // 
             // editGameButton
             // 
-            this.editGameButton.Location = new System.Drawing.Point(470, 16);
-            this.editGameButton.Name = "editGameButton";
-            this.editGameButton.Size = new System.Drawing.Size(69, 52);
-            this.editGameButton.TabIndex = 8;
-            this.editGameButton.Text = "Save";
-            this.editGameButton.UseVisualStyleBackColor = true;
-            this.editGameButton.Click += new System.EventHandler(this.editGameButton_Click);
+            editGameButton.Location = new System.Drawing.Point(470, 16);
+            editGameButton.Name = "editGameButton";
+            editGameButton.Size = new System.Drawing.Size(69, 52);
+            editGameButton.TabIndex = 8;
+            editGameButton.Text = "Save";
+            editGameButton.UseVisualStyleBackColor = true;
+            editGameButton.Click += editGameButton_Click;
             // 
             // nameBox
             // 
-            this.nameBox.Location = new System.Drawing.Point(52, 16);
-            this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(200, 23);
-            this.nameBox.TabIndex = 4;
-            this.nameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nameBox_KeyDown);
+            nameBox.Location = new System.Drawing.Point(52, 16);
+            nameBox.Name = "nameBox";
+            nameBox.Size = new System.Drawing.Size(200, 23);
+            nameBox.TabIndex = 4;
+            nameBox.KeyDown += nameBox_KeyDown;
             // 
             // scoreLabel
             // 
-            this.scoreLabel.AutoSize = true;
-            this.scoreLabel.Location = new System.Drawing.Point(273, 48);
-            this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(36, 15);
-            this.scoreLabel.TabIndex = 11;
-            this.scoreLabel.Text = "Score";
+            scoreLabel.AutoSize = true;
+            scoreLabel.Location = new System.Drawing.Point(273, 48);
+            scoreLabel.Name = "scoreLabel";
+            scoreLabel.Size = new System.Drawing.Size(36, 15);
+            scoreLabel.TabIndex = 11;
+            scoreLabel.Text = "Score";
             // 
             // nameLabel
             // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(6, 19);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(39, 15);
-            this.nameLabel.TabIndex = 8;
-            this.nameLabel.Text = "Name";
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(6, 19);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(39, 15);
+            nameLabel.TabIndex = 8;
+            nameLabel.Text = "Name";
             // 
             // progressLabel
             // 
-            this.progressLabel.AutoSize = true;
-            this.progressLabel.Location = new System.Drawing.Point(273, 19);
-            this.progressLabel.Name = "progressLabel";
-            this.progressLabel.Size = new System.Drawing.Size(52, 15);
-            this.progressLabel.TabIndex = 10;
-            this.progressLabel.Text = "Progress";
+            progressLabel.AutoSize = true;
+            progressLabel.Location = new System.Drawing.Point(273, 19);
+            progressLabel.Name = "progressLabel";
+            progressLabel.Size = new System.Drawing.Size(52, 15);
+            progressLabel.TabIndex = 10;
+            progressLabel.Text = "Progress";
             // 
             // dateLabel
             // 
-            this.dateLabel.AutoSize = true;
-            this.dateLabel.Location = new System.Drawing.Point(6, 48);
-            this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(31, 15);
-            this.dateLabel.TabIndex = 9;
-            this.dateLabel.Text = "Date";
+            dateLabel.AutoSize = true;
+            dateLabel.Location = new System.Drawing.Point(6, 48);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new System.Drawing.Size(31, 15);
+            dateLabel.TabIndex = 9;
+            dateLabel.Text = "Date";
             // 
             // gameListView
             // 
-            this.gameListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id,
-            this.name,
-            this.date,
-            this.progress,
-            this.score});
-            this.gameListView.FullRowSelect = true;
-            this.gameListView.GridLines = true;
-            this.gameListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.gameListView.HideSelection = false;
-            this.gameListView.Location = new System.Drawing.Point(57, 90);
-            this.gameListView.MaximumSize = new System.Drawing.Size(600, 300);
-            this.gameListView.MultiSelect = false;
-            this.gameListView.Name = "gameListView";
-            this.gameListView.RightToLeftLayout = true;
-            this.gameListView.Size = new System.Drawing.Size(545, 167);
-            this.gameListView.TabIndex = 3;
-            this.gameListView.UseCompatibleStateImageBehavior = false;
-            this.gameListView.View = System.Windows.Forms.View.Details;
-            this.gameListView.SelectedIndexChanged += new System.EventHandler(this.gameListView_SelectedIndexChanged);
-            this.gameListView.Enter += new System.EventHandler(this.gameListView_Enter);
-            this.gameListView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameListView_KeyDown);
+            gameListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { id, name, date, progress, score });
+            gameListView.FullRowSelect = true;
+            gameListView.GridLines = true;
+            gameListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            gameListView.Location = new System.Drawing.Point(57, 90);
+            gameListView.MaximumSize = new System.Drawing.Size(600, 300);
+            gameListView.MultiSelect = false;
+            gameListView.Name = "gameListView";
+            gameListView.RightToLeftLayout = true;
+            gameListView.Size = new System.Drawing.Size(545, 167);
+            gameListView.TabIndex = 3;
+            gameListView.UseCompatibleStateImageBehavior = false;
+            gameListView.View = System.Windows.Forms.View.Details;
+            gameListView.SelectedIndexChanged += gameListView_SelectedIndexChanged;
+            gameListView.Enter += gameListView_Enter;
+            gameListView.KeyDown += gameListView_KeyDown;
             // 
             // id
             // 
-            this.id.Name = "id";
-            this.id.Text = "ID";
-            this.id.Width = 30;
+            id.Name = "id";
+            id.Text = "ID";
+            id.Width = 30;
             // 
             // name
             // 
-            this.name.Text = "Name";
-            this.name.Width = 250;
+            name.Text = "Name";
+            name.Width = 250;
             // 
             // date
             // 
-            this.date.Text = "Date";
-            this.date.Width = 90;
+            date.Text = "Date";
+            date.Width = 90;
             // 
             // progress
             // 
-            this.progress.Text = "Progress";
-            this.progress.Width = 90;
+            progress.Text = "Progress";
+            progress.Width = 90;
             // 
             // score
             // 
-            this.score.Text = "Score";
+            score.Text = "Score";
             // 
             // addGameButton
             // 
-            this.addGameButton.Location = new System.Drawing.Point(527, 35);
-            this.addGameButton.Name = "addGameButton";
-            this.addGameButton.Size = new System.Drawing.Size(75, 23);
-            this.addGameButton.TabIndex = 2;
-            this.addGameButton.Text = "Add game";
-            this.addGameButton.UseVisualStyleBackColor = true;
-            this.addGameButton.Click += new System.EventHandler(this.addGameButton_Click);
+            addGameButton.Location = new System.Drawing.Point(527, 35);
+            addGameButton.Name = "addGameButton";
+            addGameButton.Size = new System.Drawing.Size(75, 23);
+            addGameButton.TabIndex = 2;
+            addGameButton.Text = "Add game";
+            addGameButton.UseVisualStyleBackColor = true;
+            addGameButton.Click += addGameButton_Click;
             // 
             // gameNameBox
             // 
-            this.gameNameBox.Location = new System.Drawing.Point(57, 35);
-            this.gameNameBox.Name = "gameNameBox";
-            this.gameNameBox.Size = new System.Drawing.Size(464, 23);
-            this.gameNameBox.TabIndex = 1;
-            this.gameNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameNameBox_KeyDown);
+            gameNameBox.Location = new System.Drawing.Point(57, 35);
+            gameNameBox.Name = "gameNameBox";
+            gameNameBox.Size = new System.Drawing.Size(464, 23);
+            gameNameBox.TabIndex = 1;
+            gameNameBox.KeyDown += gameNameBox_KeyDown;
             // 
             // gameManagerMenu
             // 
-            this.gameManagerMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showShortcutsToolStripMenuItem,
-            this.clearDatabaseToolStripMenuItem});
-            this.gameManagerMenu.Location = new System.Drawing.Point(0, 0);
-            this.gameManagerMenu.Name = "gameManagerMenu";
-            this.gameManagerMenu.Size = new System.Drawing.Size(672, 24);
-            this.gameManagerMenu.TabIndex = 13;
-            this.gameManagerMenu.Text = "gameManagerMenu";
+            gameManagerMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { showShortcutsToolStripMenuItem, settingsToolStripMenuItem, clearDatabaseToolStripMenuItem });
+            gameManagerMenu.Location = new System.Drawing.Point(0, 0);
+            gameManagerMenu.Name = "gameManagerMenu";
+            gameManagerMenu.Size = new System.Drawing.Size(672, 24);
+            gameManagerMenu.TabIndex = 13;
+            gameManagerMenu.Text = "gameManagerMenu";
             // 
             // showShortcutsToolStripMenuItem
             // 
-            this.showShortcutsToolStripMenuItem.Name = "showShortcutsToolStripMenuItem";
-            this.showShortcutsToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
-            this.showShortcutsToolStripMenuItem.Text = "Show shortcuts";
-            this.showShortcutsToolStripMenuItem.Click += new System.EventHandler(this.showShortcutsToolStripMenuItem_Click);
+            showShortcutsToolStripMenuItem.Name = "showShortcutsToolStripMenuItem";
+            showShortcutsToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            showShortcutsToolStripMenuItem.Text = "Show shortcuts";
+            showShortcutsToolStripMenuItem.Click += showShortcutsToolStripMenuItem_Click;
             // 
             // clearDatabaseToolStripMenuItem
             // 
-            this.clearDatabaseToolStripMenuItem.Name = "clearDatabaseToolStripMenuItem";
-            this.clearDatabaseToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.clearDatabaseToolStripMenuItem.Text = "Clear database";
-            this.clearDatabaseToolStripMenuItem.Click += new System.EventHandler(this.clearDatabaseToolStripMenuItem_Click);
+            clearDatabaseToolStripMenuItem.Name = "clearDatabaseToolStripMenuItem";
+            clearDatabaseToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            clearDatabaseToolStripMenuItem.Text = "Clear database";
+            clearDatabaseToolStripMenuItem.Click += clearDatabaseToolStripMenuItem_Click;
             // 
             // GameManagerUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(696, 388);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MainMenuStrip = this.gameManagerMenu;
-            this.Name = "GameManagerUI";
-            this.Text = "Game Manager v2";
-            this.Load += new System.EventHandler(this.GameManagerUI_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.selectedItemContainer.ResumeLayout(false);
-            this.selectedItemContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.scoreBox)).EndInit();
-            this.gameManagerMenu.ResumeLayout(false);
-            this.gameManagerMenu.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoSize = true;
+            ClientSize = new System.Drawing.Size(696, 388);
+            Controls.Add(panel1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            MainMenuStrip = gameManagerMenu;
+            Name = "GameManagerUI";
+            Text = "Game Manager v2";
+            Load += GameManagerUI_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            selectedItemContainer.ResumeLayout(false);
+            selectedItemContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)scoreBox).EndInit();
+            gameManagerMenu.ResumeLayout(false);
+            gameManagerMenu.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -319,6 +303,7 @@
         private System.Windows.Forms.ToolStripMenuItem clearDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     }
 }
 

@@ -18,7 +18,8 @@ namespace GameManagerV2
         private void UpdateGameListView(int selectRow = 0)
         {
             gameListView.Items.Clear();
-            dbHandler.GetAllGames().ForEach((GameRecord game) => {
+            dbHandler.GetAllGames().ForEach((GameRecord game) =>
+            {
                 ListViewItem item = new ListViewItem();
                 item.Text = game.id.ToString();
                 item.SubItems.Add(game.name);
@@ -123,7 +124,7 @@ namespace GameManagerV2
             {
                 GameRecord game = new GameRecord();
                 String id = gameListView.SelectedItems[0].Text;
-                
+
                 game = dbHandler.GetGameById(Convert.ToInt32(id));
                 if (game.id != -1)
                 {

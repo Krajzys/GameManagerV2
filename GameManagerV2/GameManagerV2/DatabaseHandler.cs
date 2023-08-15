@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
-using System.Windows.Forms;
 using System.Data.SQLite;
 
 namespace GameManagerV2
@@ -10,11 +8,13 @@ namespace GameManagerV2
     public class DatabaseHandler
     {
         readonly string connectionString;
-        readonly string dbName = @".\games.db";
+        readonly string dbName = Properties.Settings.Default.dbFilePath;
         readonly SQLiteConnection connection = null;
 
         public DatabaseHandler()
         {
+            if (Path.GetDirectoryName(dbName) != "")
+                Directory.CreateDirectory(Path.GetDirectoryName(dbName));
             connectionString = @"URI=file:"+dbName;
             connection = new SQLiteConnection(connectionString);
             connection.Open();
@@ -23,6 +23,8 @@ namespace GameManagerV2
         public DatabaseHandler(string datebaseName)
         {
             dbName = datebaseName;
+            if (Path.GetDirectoryName(dbName) != "")
+                Directory.CreateDirectory(Path.GetDirectoryName(dbName));
             connectionString = @"URI=file:" + dbName;
             connection = new SQLiteConnection(connectionString);
             connection.Open();
@@ -36,7 +38,6 @@ namespace GameManagerV2
         public void InitializeDB()
         {
             // If database doesn't exists create it and table for data
-            string filename = dbName;
             using var cmd = new SQLiteCommand(connection);
             cmd.CommandText = "SELECT name FROM sqlite_schema WHERE type = 'table' AND name = 'games'";
             using SQLiteDataReader reader = cmd.ExecuteReader();
@@ -103,7 +104,8 @@ namespace GameManagerV2
         public GameRecord GetGameById(int id)
         {
             using var cmd = new SQLiteCommand(connection);
-            cmd.CommandText = "SELECT id, name, datetime(date), progress, score FROM games WHERE id = "+id.ToString();
+            cmd.CommandText = "SELECT id, name, datetime(date), progress, score FROM games WHERE id = @id";
+            cmd.Parameters.AddWithValue("@id", id.ToString());
             using SQLiteDataReader gameobj = cmd.ExecuteReader();
 
             GameRecord game = new GameRecord();
